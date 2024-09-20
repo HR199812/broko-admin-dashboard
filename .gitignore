@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+# 3-d model files
+*/.glb
+
 # production
 /build
 

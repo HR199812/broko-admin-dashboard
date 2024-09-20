@@ -85,6 +85,10 @@ export function NavUser({
             <Bell className="h-4 w-4 text-muted-foreground" />
             Notifications
           </DropdownMenuItem>
+          <DropdownMenuItem className="gap-2">
+            <Bell className="h-4 w-4 text-muted-foreground" />
+            Archive
+          </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem className="gap-2">

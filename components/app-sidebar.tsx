@@ -6,7 +6,7 @@ import {
   BookOpen,
   Bot,
   Code2,
-  Eclipse,
+  // Eclipse,
   Frame,
   History,
   LifeBuoy,
@@ -21,10 +21,10 @@ import {
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
+// import { NavProjects } from "@/components/nav-projects"
 import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
-import { StorageCard } from "@/components/storage-card"
+// import { StorageCard } from "@/components/storage-card"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
   Sidebar,
@@ -37,29 +37,19 @@ import {
 const data = {
   teams: [
     {
-      name: "Acme Inc",
+      name: "Broko",
       logo: Atom,
       plan: "Enterprise",
     },
-    {
-      name: "Acme Corp.",
-      logo: Eclipse,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Rabbit,
-      plan: "Free",
-    },
   ],
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "admin",
+    email: "admin@broko.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
     {
-      title: "Playground",
+      title: "Payments",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
@@ -71,13 +61,19 @@ const data = {
           description: "View your recent prompts",
         },
         {
-          title: "Starred",
+          title: "Inflows",
           url: "#",
           icon: Star,
           description: "Browse your starred prompts",
         },
         {
-          title: "Settings",
+          title: "Outflows",
+          url: "#",
+          icon: Settings2,
+          description: "Configure your playground",
+        },
+        {
+          title: "Net Banking",
           url: "#",
           icon: Settings2,
           description: "Configure your playground",
@@ -177,7 +173,7 @@ const data = {
           url: "#",
         },
         {
-          title: "Limits",
+          title: "Customize",
           url: "#",
         },
       ],
@@ -198,7 +194,7 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "Archive",
       url: "#",
       icon: Frame,
     },
@@ -208,7 +204,7 @@ const data = {
       icon: PieChart,
     },
     {
-      name: "Travel",
+      name: "Notifications",
       url: "#",
       icon: Map,
     },
@@ -249,7 +245,7 @@ const data = {
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className="bg-[#171717]">
       <SidebarHeader>
         <TeamSwitcher teams={data.teams} />
       </SidebarHeader>
@@ -258,17 +254,17 @@ export function AppSidebar() {
           <SidebarLabel>Platform</SidebarLabel>
           <NavMain items={data.navMain} searchResults={data.searchResults} />
         </SidebarItem>
-        <SidebarItem>
-          <SidebarLabel>Projects</SidebarLabel>
+        {/* <SidebarItem>
+          <SidebarLabel>Updates</SidebarLabel>
           <NavProjects projects={data.projects} />
-        </SidebarItem>
+        </SidebarItem> */}
         <SidebarItem className="mt-auto">
           <SidebarLabel>Help</SidebarLabel>
           <NavSecondary items={data.navSecondary} />
         </SidebarItem>
-        <SidebarItem>
+        {/* <SidebarItem>
           <StorageCard />
-        </SidebarItem>
+        </SidebarItem> */}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
